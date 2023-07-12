@@ -319,7 +319,7 @@
       <a href=""></a>
       <h3 style="text-align: center;">Get In Touch</h3>
 
-     <form id="contact-form" action="send.php" method="POST">
+<!--      <form id="contact-form" action="send.php" method="POST">
         <a name="contact"></a>
 
         <label>Name</label>
@@ -335,7 +335,29 @@
         <textarea class="input-field" name="message"></textarea>
 
         <input id="submit-btn" type="submit" value="Send">
+      </form> -->
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Your Role: <select name="role[]" multiple>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+          </select></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
+
+      
     </div>
   </section>
 
