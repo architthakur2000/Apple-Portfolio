@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST["email"];
   $message = $_POST["message"];
 
-  // Validate input
+  // Validate input (you can add more validation as needed)
   if (empty($name) || empty($email) || empty($message)) {
     // Handle empty fields
     echo "Please fill in all required fields.";
@@ -18,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $to = "architthakur9@outlook.com"; 
   $headers = "From: $name <$email>\r\n";
   $headers .= "Reply-To: $email\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
   // Construct email content
   $emailContent = "Name: $name\n";
