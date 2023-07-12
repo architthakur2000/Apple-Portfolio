@@ -1,5 +1,4 @@
 <?php
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Retrieve form data
   $name = $_POST["name"];
@@ -15,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Set up email headers
-  $to = "architthakur9@outlook.com"; 
+  $to = "your-email@example.com"; // Replace with your email address
   $headers = "From: $name <$email>\r\n";
   $headers .= "Reply-To: $email\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
